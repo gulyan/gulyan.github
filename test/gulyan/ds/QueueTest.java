@@ -2,6 +2,8 @@ package gulyan.ds;
 
 import static org.junit.Assert.*;
 
+import java.util.NoSuchElementException;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -104,6 +106,43 @@ public class QueueTest {
 		assertEquals(1, a);
 		assertEquals(2, b);
 		assertEquals(3, c);
+	}
+	
+	@Test
+	public final void testEmpty1() {
+		l.push(2);
+		l.pop();
+		try {
+			l.top();
+			fail("NoSuchElementException was not thrown");
+		}
+		catch(NoSuchElementException e) {
+		}
+		try {
+			l.pop();
+			fail("NoSuchElementException was not thrown");
+		}
+		catch(NoSuchElementException e) {
+		}
+	}
+	
+	@Test
+	public final void testEmpty2() {
+		l.push(2);
+		l.push(3);
+		l.clear();
+		try {
+			l.top();
+			fail("NoSuchElementException was not thrown");
+		}
+		catch(NoSuchElementException e) {
+		}
+		try {
+			l.pop();
+			fail("NoSuchElementException was not thrown");
+		}
+		catch(NoSuchElementException e) {
+		}
 	}
 
 }
