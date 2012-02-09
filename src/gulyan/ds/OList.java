@@ -17,14 +17,14 @@ public interface OList<T> {
 	
 	/**
 	 * Get next element from list and remove it from list
-	 * @see top
+	 * @see OList#top top
 	 * @return element
 	 */
 	T pop();
 	
 	/**
 	 * Get next element from list
-	 * @see pop
+	 * @see OList#pop pop
 	 * @return element
 	 */
 	T top();
