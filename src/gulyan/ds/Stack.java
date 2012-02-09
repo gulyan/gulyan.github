@@ -1,35 +1,47 @@
 package gulyan.ds;
 
 public class Stack<T> implements OList<T> {
+	
+	private class Node {
+		Node next;
+		T elem;
+		Node(Node next, T elem) {
+			this.next = next;
+			this.elem = elem;
+		}
+	}
+	
+	Node last;
+	
+	public Stack() {
+		last = null;
+	}
 
 	@Override
 	public void push(T e) {
-		// TODO Auto-generated method stub
-		
+		last = new Node(last, e);
 	}
 
 	@Override
 	public T pop() {
-		// TODO Auto-generated method stub
-		return null;
+		T elem = last.elem;
+		last = last.next;
+		return elem;
 	}
 
 	@Override
 	public T top() {
-		// TODO Auto-generated method stub
-		return null;
+		return last.elem;
 	}
 
 	@Override
 	public boolean isEmpty() {
-		// TODO Auto-generated method stub
-		return false;
+		return last == null;
 	}
 
 	@Override
 	public void clear() {
-		// TODO Auto-generated method stub
-		
+		last = null;
 	}
 
 }
