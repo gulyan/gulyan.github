@@ -90,5 +90,20 @@ public class QueueTest {
 		assertEquals(2, b);
 		assertEquals(3, c);
 	}
+	
+	@Test
+	public final void test9() {
+		l.push(1);
+		l.push(2);
+		int a = l.pop();
+		l.push(3);
+		assertFalse(l.isEmpty());
+		int b = l.pop();
+		int c = l.pop();
+		assertTrue(l.isEmpty());
+		assertEquals(1, a);
+		assertEquals(2, b);
+		assertEquals(3, c);
+	}
 
 }
