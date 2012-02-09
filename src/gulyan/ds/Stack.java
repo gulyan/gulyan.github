@@ -32,7 +32,7 @@ public class Stack<T> implements OList<T> {
 			return elem;
 		}
 		catch(NullPointerException e) {
-			throw new NoSuchElementException("Stack is empty");
+			throw new NoSuchElementException("List is empty");
 		}
 	}
 
@@ -42,7 +42,7 @@ public class Stack<T> implements OList<T> {
 			return last.elem;
 		}
 		catch(NullPointerException e) {
-			throw new NoSuchElementException("Stack is empty");
+			throw new NoSuchElementException("List is empty");
 		}
 	}
 
