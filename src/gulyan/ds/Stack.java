@@ -1,5 +1,7 @@
 package gulyan.ds;
 
+import java.util.NoSuchElementException;
+
 public class Stack<T> implements OList<T> {
 	
 	private class Node {
@@ -24,14 +26,24 @@ public class Stack<T> implements OList<T> {
 
 	@Override
 	public T pop() {
-		T elem = last.elem;
-		last = last.next;
-		return elem;
+		try {
+			T elem = last.elem;
+			last = last.next;
+			return elem;
+		}
+		catch(NullPointerException e) {
+			throw new NoSuchElementException("Stack is empty");
+		}
 	}
 
 	@Override
 	public T top() {
-		return last.elem;
+		try {
+			return last.elem;
+		}
+		catch(NullPointerException e) {
+			throw new NoSuchElementException("Stack is empty");
+		}
 	}
 
 	@Override
