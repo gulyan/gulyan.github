@@ -4,8 +4,14 @@
 package gulyan.ds;
 
 /**
- * @author gulyan
+ * Ordered list.
+ * 
+ * The elements are removed based on a strict rule.
+ * 
+ * 
+ * @author Alexandru Guduleasa
  *
+ * @param <T> element type
  */
 public interface OList<T> {
 
@@ -17,14 +23,14 @@ public interface OList<T> {
 	
 	/**
 	 * Get next element from list and remove it from list
-	 * @see OList#top top
+	 * @see #top top
 	 * @return element
 	 */
 	T pop();
 	
 	/**
 	 * Get next element from list
-	 * @see OList#pop pop
+	 * @see #pop pop
 	 * @return element
 	 */
 	T top();

@@ -121,6 +121,17 @@ package gulyan.ds;
  * 
  */
 
+/**
+ * Queue implementation of OList.
+ * 
+ * The elements are removed in the same order as they
+ * were added to he list.
+ * First element added is the first to be removed.
+ * 
+ * @author Alexandru Guduleasa
+ *
+ * @param <T> element type
+ */
 public class Queue<T> implements OList<T> {
 	
 	Stack<T> s1, s2;

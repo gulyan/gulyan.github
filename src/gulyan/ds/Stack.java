@@ -2,6 +2,17 @@ package gulyan.ds;
 
 import java.util.NoSuchElementException;
 
+/**
+ * Stack implementation of OList.
+ * 
+ * The elements are removed in the reverse order as they
+ * were added to he list.
+ * Last element added is the first to be removed.
+ * 
+ * @author Alexandru Guduleasa
+ *
+ * @param <T> element type
+ */
 public class Stack<T> implements OList<T> {
 	
 	private class Node {
